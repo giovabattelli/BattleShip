@@ -4,6 +4,37 @@ Built while carefully following object-oriented design SOLID principles, for pra
 - Host: 0.0.0.0
 - Port: 35001
 
+### How can I implement my own AI player?
+Currently the AI player just chooses random positions to target on the opponent's board. If you want to implement your own AI shot choosing, edit the `takeArtificialPlayerShots` function in `Board.java`. [Here](https://github.com/giovabattelli/server-battleship/blob/56f2e256d0d78ce86f8c916f789b7d0aede0327e/src/main/java/model/Board.java#L94) is a link to the function definition.
+
+```java
+public List<Coord> takeArtificialPlayerShots(int shots, Random random) {
+
+    List<Coord> finalShots = new ArrayList<>();
+
+    if (addToArray) {
+      for (Coord[] row : coords) {
+        arrayOfCoords.addAll(Arrays.asList(row));
+      }
+      addToArray = false;
+    }
+
+    if (shots < arrayOfCoords.size()) {
+      for (int i = 0; i < shots; i++) {
+        int randomIndex = random.nextInt(arrayOfCoords.size());
+        Coord randomCoord = arrayOfCoords.get(randomIndex);
+        finalShots.add(randomCoord);
+        arrayOfCoords.remove(randomCoord);
+      }
+    } else {
+      finalShots.addAll(arrayOfCoords);
+      arrayOfCoords.clear();
+    }
+
+    return finalShots;
+}
+```
+
 ## Rules:
 
 ### Fleet Size
