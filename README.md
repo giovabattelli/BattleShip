@@ -1,8 +1,8 @@
 # Server Battleship
+Built while carefully following object-oriented design SOLID principles, for practice
 - Play a game of battleship (with modified game rules) using your AI against a server's AI (run on your computer)
 - Host: 0.0.0.0
 - Port: 35001
-- Built while carefully following object-oriented design SOLID principles, for practice
 
 ## Rules:
 
