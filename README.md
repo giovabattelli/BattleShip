@@ -5,7 +5,7 @@ Built while carefully following object-oriented design SOLID principles, for pra
 - Port: 35001
 
 ### How can I implement my own AI player?
-Currently the AI player just chooses random positions to target on the opponent's board. If you want to implement your own AI shot choosing, edit the `takeArtificialPlayerShots` function in `Board.java`. [Here](https://github.com/giovabattelli/server-battleship/blob/56f2e256d0d78ce86f8c916f789b7d0aede0327e/src/main/java/model/Board.java#L94) is a link to the function definition.
+Currently the AI player just chooses random positions to target on the opponent's board. If you want to implement your own AI shot choosing, edit the `takeArtificialPlayerShots` function in `Board.java`. [Here](https://github.com/giovabattelli/server-battleship/blob/56f2e256d0d78ce86f8c916f789b7d0aede0327e/src/main/java/model/Board.java#L94) is a link to the function definition. The function is called using the opponents board object, so in your implementation make sure you're not cheating and checking if a coordinate is populated with a ship!
 
 ```java
 public List<Coord> takeArtificialPlayerShots(int shots, Random random) {
