@@ -1,3 +1,5 @@
+> Built in 2023.
+
 # BattleShip (with websockets)
 Built while carefully following object-oriented design SOLID principles, for practice
 - Play a game of battleship (with modified game rules) using your AI against a server's AI (run on your computer)
